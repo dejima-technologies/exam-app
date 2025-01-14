@@ -1,0 +1,13 @@
+<%= form_with(url: tops_path, data: { turbo: false }) do |form| %>
+  <div>
+    <%= form.label :special_string, "指定された文字列を入力してください" %>
+    <%= form.text_field :special_string %>
+  </div>
+  <div>
+    <%= form.submit "送信" %>
+  </div>
+<% end %>
+
+<% if @message %>
+  <p><%= @message %></p>
+<% end %>
